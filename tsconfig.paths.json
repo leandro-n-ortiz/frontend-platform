@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@@/*": ["src/*"], // all direct files and subfolders of "src" 
+      "@@draft-app-common": ["draft-app-common"], // only "index.ts" of "draft-app-common" (draft resources of the "app-common" lib)
+      "@@external-models": ["external-models"], // only "index.ts" of "external-models" (usually backend types/interfaces and enums)
+    }
+  },
+ }
+ 
