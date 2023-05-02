@@ -1,14 +1,11 @@
-import { createSlice, SliceCaseReducers } from '@reduxjs/toolkit';
+import { createSlice } from '@reduxjs/toolkit';
 
 import { LoggedUser } from '@@/models/types';
 import apiSlice from '@@/redux/slices/apiSlice';
 
-const loggedUserSlice = createSlice<
-  LoggedUser | null,
-  SliceCaseReducers<LoggedUser | null>
->({
+const loggedUserSlice = createSlice({
   name: 'loggedUser',
-  initialState: null,
+  initialState: null as LoggedUser | null,
   reducers: {
     localAccessTokenFound: (state, action) => {
       // starts a clean state object only with the accessToken
@@ -70,5 +67,7 @@ const loggedUserSlice = createSlice<
       );
   },
 });
+
+export const { localAccessTokenFound } = loggedUserSlice.actions;
 
 export default loggedUserSlice;

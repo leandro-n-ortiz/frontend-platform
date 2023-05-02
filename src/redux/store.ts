@@ -7,7 +7,7 @@ import loggedUserSlice from '@@/redux/slices/loggedUserSlice';
 export const store = configureStore({
   reducer: {
     [apiSlice.reducerPath]: apiSlice.reducer,
-    loggedUser: loggedUserSlice.reducer,
+    [loggedUserSlice.name]: loggedUserSlice.reducer,
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware().concat(apiSlice.middleware),
