@@ -1,10 +1,10 @@
-import { createSlice, SliceCaseReducers } from '@reduxjs/toolkit';
+import { createSlice } from '@reduxjs/toolkit';
 
 import { Task } from '@@/models/types';
 
-const myTasksSlice = createSlice<Task[], SliceCaseReducers<Task[]>>({
+const myTasksSlice = createSlice({
   name: 'myTasks',
-  initialState: [],
+  initialState: [] as Task[],
   reducers: {},
 });
 

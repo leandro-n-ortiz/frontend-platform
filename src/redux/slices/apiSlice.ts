@@ -138,7 +138,7 @@ const apiSlice = createApi({
 export const {
   useLoginMutation,
   useSignupMutation,
-  useGetMySessionQuery,
+  useLazyGetMySessionQuery,
 
   useLazyGetUsersQuery,
   useLazyGetUserQuery,
